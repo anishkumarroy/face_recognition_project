@@ -3,8 +3,6 @@ import os
 import cv2
 import face_recognition
 import numpy as np
-from time import sleep
-
 
 def get_encoded_faces():
 
@@ -22,14 +20,6 @@ def get_encoded_faces():
                 #encoding = fr.face_encodings(face)[0]
 
     return encoded
-
-
-# def unknown_image_encoded(img):
-
-#     face = fr.load_image_file("face_repository/" + img)
-#     encoding = fr.face_encodings(face)[0]
-
-#     return encoding
 
 
 def classify_face(im, tolerance=0.5):
@@ -75,4 +65,4 @@ def classify_face(im, tolerance=0.5):
             return face_names 
 
 
-print(classify_face("group_photo2.jpeg", tolerance=0.5)) # You can either try to find people "test2.jpg" or "test1.jpg" in the string.
+print(classify_face("group_photo2.jpeg", tolerance=0.5)) 
